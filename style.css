@@ -1,9 +1,249 @@
-/* Custom styles (optional) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7fafc;
+    color: #1a202c;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3 {
-    color: #1f2937; /* Custom color */
+    font-family: 'Playfair Display', serif;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+/* Header */
+.header {
+    background-color: #2d3748;
+    color: white;
+    padding: 24px 0;
+}
+
+.site-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.nav {
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 16px;
+    font-size: 1.125rem;
+}
+
+.nav-list .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #1a202c;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Video Gallery */
+.portfolio {
+    padding: 64px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 48px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.video-box {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-box .video {
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.video-box .video-portrait {
+    aspect-ratio: 9 / 16;
+}
+
+.video-box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3182ce;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #2b6cb0;
+}
+
+/* About Section */
+.about {
+    background-color: #edf2f7;
+    padding: 64px 0;
+}
+
+.about-text {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 64px 0;
+}
+
+.contact-text {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+.contact-email {
+    color: #3182ce;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #2d3748;
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .site-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.social-media-section {
+    background-color: #f4f4f4;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-media-list li {
+    margin: 0 10px;
+}
+
+.social-media-list a {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-media-list a:hover {
+    color: #0073e6; /* Adjust the hover color as needed */
+}
