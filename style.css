@@ -247,3 +247,13 @@ h1, h2, h3 {
 .social-media-list a:hover {
     color: #0073e6; /* Adjust the hover color as needed */
 }
+
+
+.footer a {
+    color: #ffffff; /* Makes the link text white */
+    text-decoration: none; /* Removes the underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}

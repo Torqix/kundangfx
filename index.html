@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts for Better Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Plyr CSS for Custom Video Player -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <style>
+        /* Prevent text selection */
+        body {
+            user-select: none;
+        }
+
+        /* Disable right-click */
+        iframe {
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +30,7 @@
             <h1 class="site-title">Kundan GFX</h1>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -31,8 +44,16 @@
         <div class="container text-center">
             <h2 class="hero-title">Welcome to KGFX Portfolio</h2>
             <p class="hero-subtitle">Showcasing my latest video editing projects.</p>
-            <div class="video-wrapper">
-                <iframe class="video" src="https://www.behance.net/vimeo_video_link" frameborder="0" allowfullscreen></iframe>
+            <div class="video-wrapper hero-video-wrapper">
+                <!-- Hero Video using Plyr -->
+                <div class="plyr__video-embed" oncontextmenu="return false;">
+                    <iframe 
+                        src="https://www.youtube.com/embed/eqMHeQ7OB00?si=UChNN5GVzODb9c21"
+                        allowfullscreen
+                        allow="autoplay"
+                        class="w-full h-64 md:h-80 lg:h-96"
+                    ></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -42,20 +63,79 @@
         <div class="container">
             <h2 class="section-title">My Work</h2>
             <div class="grid">
-                <!-- Example of a Landscape Video -->
+                <!-- Existing Videos -->
                 <div class="video-box hover-effect">
-                    <iframe class="video" src="https://www.behance.net/vimeo_video_link" frameborder="0" allowfullscreen></iframe>
+                    <div class="plyr__video-embed" oncontextmenu="return false;">
+                        <iframe
+                            src="https://www.youtube.com/embed/rkKuIPBDtpA?origin=https://kundangfx.github.io&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&enablejsapi=1"
+                            allowfullscreen
+                            allow="autoplay"
+                            class="w-full h-64 md:h-80 lg:h-96"
+                        ></iframe>
+                    </div>
                 </div>
-                <!-- Example of a Portrait (Reels) Video -->
+
                 <div class="video-box hover-effect">
-                    <iframe class="video-portrait" src="https://www.behance.net/vimeo_video_link" frameborder="0" allowfullscreen></iframe>
+                    <div class="plyr__video-embed" oncontextmenu="return false;">
+                        <iframe
+                            src="https://www.youtube.com/embed/k_Qo9TYcnZE?si=Xo_tb-XQEDloepvH"
+                            allowfullscreen
+                            allow="autoplay"
+                            class="w-full h-64 md:h-80 lg:h-96"
+                        ></iframe>
+                    </div>
                 </div>
-                <!-- Add more videos as needed -->
+
+                <div class="video-box hover-effect">
+                    <div class="plyr__video-embed" oncontextmenu="return false;">
+                        <iframe
+                            src="https://www.youtube.com/embed/DQ5uoKEXrG0?si=JRdOEJiwJnkjS8EI"
+                            allowfullscreen
+                            allow="autoplay"
+                            class="w-full h-64 md:h-80 lg:h-96"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <div class="video-box hover-effect">
+                    <div class="plyr__video-embed" oncontextmenu="return false;">
+                        <iframe
+                            src="https://www.youtube.com/embed/wissz4zR1WQ?si=osuJ32_047iwQQN6"
+                            allowfullscreen
+                            allow="autoplay"
+                            class="w-full h-64 md:h-80 lg:h-96"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- New Video 1 -->
+                <div class="video-box hover-effect">
+                    <div class="plyr__video-embed" oncontextmenu="return false;">
+                        <iframe
+                            src="https://www.youtube.com/embed/pC2-cOAWzc4?si=ZqHNYCtsIrzo0GMk"
+                            allowfullscreen
+                            allow="autoplay"
+                            class="w-full h-64 md:h-80 lg:h-96"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- New Video 2 -->
+                <div class="video-box hover-effect">
+                    <div class="plyr__video-embed" oncontextmenu="return false;">
+                        <iframe
+                            src="https://www.youtube.com/embed/_KEIc_7jjyg?si=1LqcTVNPUn0YT26T"
+                            allowfullscreen
+                            allow="autoplay"
+                            class="w-full h-64 md:h-80 lg:h-96"
+                        ></iframe>
+                    </div>
+                </div>
             </div>
 
             <!-- More Projects Button -->
             <div class="text-center mt-12">
-                <a href="https://www.behance.net/your_behance_portfolio" target="_blank" class="btn">More Projects</a>
+                <a href="https://be.net/kundangfx" target="_blank" class="btn">More Projects</a>
             </div>
         </div>
     </section>
@@ -77,25 +157,37 @@
         </div>
      </section>
 
-     <section id="social-media" class="social-media-section">
+    <!-- Social Media Section -->
+    <section id="social-media" class="social-media-section">
         <div class="container">
             <ul class="social-media-list">
-                <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a></li>
-                <li><a href="https://www.behance.net/yourprofile" target="_blank">Behance</a></li>
+                <li><a href="https://www.linkedin.com/in/kundangfx" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/kundangfx" target="_blank">Instagram</a></li>
+                <li><a href="https://be.net/kundangfx" target="_blank">Behance</a></li>
                 <!-- Add more social media links as needed -->
             </ul>
         </div>
     </section>
-    
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
-            <p>&copy; 2024 KundanGFX. Site is Developed by RelaxKartikey &hearts;.</p>
+            <p>&copy; 2024 KundanGFX. Site is Developed by <a href="https://bento.me/relaxkartikey" target="_blank">RelaxKartikey</a> &hearts;.</p>
         </div>
     </footer>
+
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        const players = Plyr.setup('.plyr__video-embed', {
+            controls: ['play', 'progress', 'volume', 'fullscreen', 'quality'],
+            settings: ['quality'],
+            quality: {
+                default: 576, // Set a default quality
+                options: [4320, 2160, 1440, 1080, 720, 576, 480, 360, 240], // List of available qualities
+            },
+        });
+    </script>
 
 </body>
 </html>
